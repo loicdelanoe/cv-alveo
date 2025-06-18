@@ -29,7 +29,7 @@ interface About {
       <ResponsiveImage class="rounded-lg" :media="content.image" />
       <div class="flex flex-col gap-4 max-w-1/2">
         <h2 class="text-5xl">{{ content.title }}</h2>
-        <div v-html="renderMarkdown(content.content)" />
+        <div class="cv-wysiwyg" v-html="renderMarkdown(content.content)" />
         <ul class="flex">
           <li v-for="button in content.buttons" :key="JSON.stringify(button)">
             <TheButton tag="Link" :variant="button.variant">{{ button.label }}</TheButton>
