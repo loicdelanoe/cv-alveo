@@ -15,10 +15,6 @@ type Information = {
 
 interface Contact {
   informations: Information[]
-  buttons: {
-    label: string
-    href: string
-  }[]
 }
 </script>
 
@@ -31,13 +27,6 @@ interface Contact {
           <dd class="cv-wysiwyg" v-html="renderMarkdown(info.content)" />
         </div>
       </dl>
-      <ul class="flex flex-shrink-0">
-        <li v-for="button in content.buttons" :key="JSON.stringify(button)">
-          <TheButton tag="Link" variant="cv-secondary" :href="button.href">
-            {{ button.label }}
-          </TheButton>
-        </li>
-      </ul>
     </Section>
   </div>
 </template>
