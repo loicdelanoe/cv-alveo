@@ -22,11 +22,11 @@ interface Opinion {
 <template>
   <div id="opinion" class="relative z-2 bg-black py-32 border-b border-border">
     <Section class="flex flex-col justify-center items-center gap-20">
-      <div class="flex justify-between gap-12">
-        <h2 class="text-5xl">{{ content.title }}</h2>
-        <div class="max-w-1/2 cv-wysiwyg" v-html="renderMarkdown(content.content)" />
+      <div class="flex flex-col justify-between gap-12 md:flex-row">
+        <h2 class="text-4xl md:text-5xl">{{ content.title }}</h2>
+        <div class="md:max-w-1/2 cv-wysiwyg" v-html="renderMarkdown(content.content)" />
       </div>
-      <dl class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <div
           v-for="card in content.cards"
           :key="JSON.stringify(card)"

@@ -12,7 +12,9 @@ defineProps<{
 
 <template>
   <div class="relative z-1 bg-black text-white py-12">
-    <footer class="max-w-[1200px] mx-auto w-full bg-black flex justify-between items-center">
+    <footer
+      class="max-w-[1200px] mx-auto w-full bg-black flex flex-col justify-between items-center md:flex-row px-4 md:px-12 lg:px-0"
+    >
       <h2 class="sr-only">{{ menu.name }}</h2>
 
       <Link class="inline-flex text-3xl font-medium" href="/"> Loïc D.</Link>

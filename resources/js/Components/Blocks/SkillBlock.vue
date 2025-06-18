@@ -26,13 +26,13 @@ interface Skills {
 <template>
   <div id="skills" class="relative z-2 bg-black py-32">
     <Section class="flex flex-col justify-center items-center">
-      <h2 class="text-5xl max-w-1/2 text-center mb-5">{{ content.title }}</h2>
+      <h2 class="text-4xl md:text-5xl md:max-w-1/2 text-center mb-5">{{ content.title }}</h2>
       <div
         class="cv-wysiwyg max-w-prose text-center mb-12"
         v-html="renderMarkdown(content.content)"
       />
-      <div class="flex gap-12">
-        <ResponsiveImage class="max-w-1/2 rounded-lg" :media="content.image" />
+      <div class="flex flex-col gap-12 md:flex-row">
+        <ResponsiveImage class="md:max-w-1/2 rounded-lg object-cover" :media="content.image" />
         <dl class="flex flex-col gap-4">
           <div v-for="skill in content.skills" :key="JSON.stringify(skill)">
             <dt class="text-3xl flex items-center gap-2 font-medium mb-4">
