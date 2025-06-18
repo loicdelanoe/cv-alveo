@@ -2,6 +2,7 @@
 import { Head, usePage } from '@inertiajs/vue3'
 
 import { ExtendedPageProps } from '@/Components/Admin/Form/AsideField.vue'
+import FooterNavigation from '@/Components/FooterNavigation.vue'
 import MainNavigation from '@/Components/MainNavigation.vue'
 import { Menu } from '@/types/models/menu'
 import { getBlockCpt } from '@/utils/mapping'
@@ -16,6 +17,7 @@ defineProps<{
 
 const pageProps = usePage<ExtendedPageProps>().props
 const menu = getMenu('main-navigation')
+const footer = getMenu('footer-navigation')
 </script>
 
 <template>
@@ -40,8 +42,8 @@ const menu = getMenu('main-navigation')
         />
       </Suspense>
     </main>
+    <FooterNavigation v-if="footer" :menu="footer" />
   </div>
-  <!-- <Footer v-if="footer" :menu="footer" /> -->
 </template>
 
 <style scoped></style>

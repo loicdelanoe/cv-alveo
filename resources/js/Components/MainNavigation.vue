@@ -2,6 +2,8 @@
 import { Menu } from '@/types/models/menu'
 import { getRoute } from '@/utils/utils'
 
+import ActionLink from './Ui/ActionLink.vue'
+import NavigationLink from './Ui/NavigationLink.vue'
 import TheButton from './Ui/TheButton.vue'
 
 const props = defineProps<{
@@ -46,21 +48,13 @@ const ctas = actions.splice(actions.length - 2, 2)
         <h2 class="sr-only">{{ menu.name }}</h2>
         <ul class="flex flex-col items-center md:flex-row max-sm:text-lg">
           <li v-for="page in pages" :key="page.slug">
-            <Link
-              :href="page.is_home ? '/' : getRoute(page.slug)"
-              class="text-lg py-7 px-5 inline-block hover:text-hover transition-all"
-            >
-              {{ page.title }}
-            </Link>
+            <NavigationLink :page="page">{{ page.title }}</NavigationLink>
           </li>
           <li v-for="action in actions" :key="JSON.stringify(action)">
-            <Link
-              :href="getRoute(action.value)"
-              class="text-lg py-7 px-5 inline-block hover:text-hover transition-all"
-            >
-              {{ action.label }}
-            </Link>
+            <ActionLink :action="action">{{ action.label }}</ActionLink>
           </li>
+
+          <!-- Ctas -->
           <li class="mr-4">
             <TheButton tag="a" variant="cv-primary" target="_blank" :href="ctas[0].value">
               {{ ctas[0].label }}
