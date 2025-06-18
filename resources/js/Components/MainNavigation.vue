@@ -19,6 +19,7 @@ const ctas = actions.splice(actions.length - 2, 2)
       class="text-white z-4 py-5 px-4 flex items-center justify-between gap-16 max-w-[1200px] w-full mx-auto md:py-5 md:flex-row md:relative font-medium"
     >
       <Link class="inline-flex text-3xl font-medium" href="/"> Loïc D.</Link>
+
       <!-- Burger menu -->
       <label
         class="flex flex-col gap-1 absolute z-5 top-1/2 -translate-y-1/2 peer right-8 cursor-pointer h-5 justify-center items-center md:sr-only"
@@ -61,12 +62,12 @@ const ctas = actions.splice(actions.length - 2, 2)
             </Link>
           </li>
           <li class="mr-4">
-            <TheButton tag="Link" variant="cv-primary" :href="ctas[0].value">
+            <TheButton tag="a" variant="cv-primary" target="_blank" :href="ctas[0].value">
               {{ ctas[0].label }}
             </TheButton>
           </li>
           <li>
-            <TheButton tag="Link" variant="cv-secondary" :href="ctas[1].value">
+            <TheButton tag="a" variant="cv-secondary" :href="ctas[1].value">
               {{ ctas[1].label }}
             </TheButton>
           </li>

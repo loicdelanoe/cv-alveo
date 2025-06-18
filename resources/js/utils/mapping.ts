@@ -19,6 +19,7 @@ import IconSquareArrowRight from '@/Components/Admin/Icon/IconSquareArrowRight.v
 import AboutBlock from '@/Components/Blocks/AboutBlock.vue'
 import ContactBlock from '@/Components/Blocks/ContactBlock.vue'
 import HeroBlock from '@/Components/Blocks/HeroBlock.vue'
+import InterestedBlock from '@/Components/Blocks/InterestedBlock.vue'
 import OpinionBlock from '@/Components/Blocks/OpinionBlock.vue'
 import SkillBlock from '@/Components/Blocks/SkillBlock.vue'
 
@@ -43,6 +44,7 @@ export const getBlockCpt = (blockType: string) => {
     about: AboutBlock,
     opinion: OpinionBlock,
     skills: SkillBlock,
+    interested: InterestedBlock,
   }
 
   return cptMap[blockType]

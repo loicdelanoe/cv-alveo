@@ -22,7 +22,7 @@ interface About {
 </script>
 
 <template>
-  <div class="relative z-2 bg-black py-32 border-b border-border">
+  <div id="about" class="relative z-2 bg-black py-32 border-b border-border">
     <Section
       class="flex justify-between items-center after:border after:border-border after:rounded-lg after:absolute after:right-0 after:left-0 after:top-10 after:bottom-10 after:content-[''] after:-z-1 px-20"
     >
@@ -30,9 +30,11 @@ interface About {
       <div class="flex flex-col gap-4 max-w-1/2">
         <h2 class="text-5xl">{{ content.title }}</h2>
         <div class="cv-wysiwyg" v-html="renderMarkdown(content.content)" />
-        <ul class="flex">
+        <ul class="flex gap-4 items-center flex-wrap">
           <li v-for="button in content.buttons" :key="JSON.stringify(button)">
-            <TheButton tag="Link" :variant="button.variant">{{ button.label }}</TheButton>
+            <TheButton tag="Link" :variant="button.variant" :href="button.href">{{
+              button.label
+            }}</TheButton>
           </li>
         </ul>
       </div>

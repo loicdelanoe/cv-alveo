@@ -2,7 +2,7 @@
 defineProps<{
   variant: string
   href?: string
-  tag: 'Link' | 'button'
+  tag: 'Link' | 'button' | 'a'
 }>()
 </script>
 
