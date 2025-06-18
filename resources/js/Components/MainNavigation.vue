@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Menu } from '@/types/models/menu'
-import { getRoute } from '@/utils/utils'
 
 import ActionLink from './Ui/ActionLink.vue'
 import NavigationLink from './Ui/NavigationLink.vue'
@@ -20,7 +19,7 @@ const ctas = actions.splice(actions.length - 2, 2)
     <header
       class="text-white z-4 py-5 px-4 flex items-center justify-between gap-16 max-w-[1200px] w-full mx-auto md:py-5 md:flex-row md:relative font-medium"
     >
-      <Link class="inline-flex text-3xl font-medium" href="/"> Loïc D.</Link>
+      <Link class="relative z-5 inline-flex text-3xl font-medium" href="/"> Loïc D.</Link>
 
       <!-- Burger menu -->
       <label
@@ -43,7 +42,7 @@ const ctas = actions.splice(actions.length - 2, 2)
       </label>
       <!-- Navigation -->
       <nav
-        class="fixed inset-0 z-4 flex flex-col gap-6 px-6 py-12 md:p-0 items-center -translate-x-full peer-has-checked:translate-x-0 transition ease-in-out duration-500 md:relative md:translate-x-0 md:flex-row"
+        class="fixed bg-black inset-0 z-4 flex flex-col justify-center gap-6 px-6 py-12 md:p-0 items-center -translate-x-full peer-has-checked:translate-x-0 transition ease-in-out duration-500 md:relative md:translate-x-0 md:flex-row md:bg-transparent"
       >
         <h2 class="sr-only">{{ menu.name }}</h2>
         <ul class="flex flex-col items-center md:flex-row max-sm:text-lg">
@@ -55,7 +54,7 @@ const ctas = actions.splice(actions.length - 2, 2)
           </li>
 
           <!-- Ctas -->
-          <li class="mr-4">
+          <li class="mb-6 md:mb-0 md:mr-4">
             <TheButton tag="a" variant="cv-primary" target="_blank" :href="ctas[0].value">
               {{ ctas[0].label }}
             </TheButton>
