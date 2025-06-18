@@ -21,8 +21,12 @@ interface Contact {
 <template>
   <div class="relative z-2 bg-black border-y border-border">
     <Section class="flex items-center py-13 gap-4">
-      <dl class="flex w-full justify-between">
-        <div v-for="info in content.informations" :key="JSON.stringify(info)">
+      <dl class="flex flex-col justify-center w-full gap-5 md:justify-between md:flex-row">
+        <div
+          class="flex flex-col items-center md:items-start"
+          v-for="info in content.informations"
+          :key="JSON.stringify(info)"
+        >
           <dt class="text-lg mb-2 font-medium">{{ info.title }}</dt>
           <dd class="cv-wysiwyg" v-html="renderMarkdown(info.content)" />
         </div>

@@ -16,4 +16,8 @@
     .cv-wysiwyg a {
         @apply text-white font-medium;
     }
+
+    .section-border {
+        @apply md:after:border md:after:border-border md:after:rounded-lg md:after:absolute md:after:right-0 md:after:left-0 md:after:top-10 md:after:bottom-10 md:after:content-[''] md:after:-z-1;
+    }
 }

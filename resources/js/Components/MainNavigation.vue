@@ -23,7 +23,7 @@ const ctas = actions.splice(actions.length - 2, 2)
 
       <!-- Burger menu -->
       <label
-        class="flex flex-col gap-1 absolute z-5 top-1/2 -translate-y-1/2 peer right-8 cursor-pointer h-5 justify-center items-center md:sr-only"
+        class="flex flex-col gap-1 absolute z-5 top-1/2 -translate-y-1/2 peer right-4 cursor-pointer h-5 justify-center items-center md:sr-only"
         for="burger"
       >
         <input
