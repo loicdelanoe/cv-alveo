@@ -1,0 +1,21 @@
+@layer components {
+    .icon {
+        @apply !px-2.5 hover:bg-secondary-50;
+    }
+
+    .primary {
+        @apply bg-accent-400 text-secondary-950 hover:bg-accent-300;
+    }
+
+    .secondary {
+        @apply bg-secondary-50 text-secondary-950 hover:bg-secondary-100;
+      }
+
+    .outline {
+        @apply bg-transparent text-secondary-950 border-secondary-950 hover:bg-secondary-950 hover:text-white;
+    }
+
+    .delete {
+        @apply bg-red-800 text-white hover:bg-red-700;
+    }
+}

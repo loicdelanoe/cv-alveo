@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss";
+@import "./components/button.css";
+@import "../app.css";
+
+:root {
+    --bg-body: #F8F8F8;
+
+    /* Colors */
+    --c-primary: #28262D;
+    --c-primary-light: #e9e9e9;
+    --c-input: #bbbbbb;
+    --c-accent: #C2B1E8;
+    --c-white: #FFF;
+    --c-secondary: #838383;
+
+    /* Gradient */
+    --g-primary: linear-gradient(90deg, var(--c-primary) 0%, var(--c-accent) 100%);
+
+    /* Font Size */
+    --fs-h1: 2.5rem;
+
+}
+
+@theme {
+    --font-sans: 'Lexend', serif;
+    --font-yeseva: 'Yeseva One', serif;
+
+    --color-background: #EFEDED;
+
+    /* Accent color */
+    --color-accent-50: #fefaec;
+    --color-accent-100: #faf2cb;
+    --color-accent-200: #f5e292;
+    --color-accent-300: #f0cf59;
+    --color-accent-400: #eec041;
+    --color-accent-500: #e59d1b;
+    --color-accent-600: #cb7814;
+    --color-accent-700: #a95714;
+    --color-accent-800: #894417;
+    --color-accent-900: #713816;
+    --color-accent-950: #411c07;
+
+    /* Secondary color */
+    --color-secondary-50: #f6f6f6;
+    --color-secondary-100: #e7e7e7;
+    --color-secondary-200: #d1d1d1;
+    --color-secondary-300: #b0b0b0;
+    --color-secondary-400: #888888;
+    --color-secondary-500: #6d6d6d;
+    --color-secondary-600: #5d5d5d;
+    --color-secondary-700: #4f4f4f;
+    --color-secondary-800: #454545;
+    --color-secondary-900: #3d3d3d;
+    --color-secondary-950: #272727;
+}
+
+@layer components {
+    .center-x {
+        @apply absolute left-1/2 -translate-x-1/2
+    }
+
+    .wysiwyg h1 {
+        @apply text-3xl font-medium text-secondary-950 mb-5;
+    }
+
+    .wysiwyg h2 {
+        @apply text-2xl font-medium text-secondary-950 mb-4;
+    }
+
+    .wysiwyg h3 {
+        @apply text-xl font-medium text-secondary-950 mb-3;
+    }
+
+    .wysiwyg h4 {
+        @apply text-lg font-medium text-secondary-950 mb-2;
+    }
+
+    .wysiwyg ul {
+        @apply list-disc pl-5 mb-4;
+    }
+
+    .wysiwyg ol {
+        @apply list-decimal pl-5 mb-4;
+    }
+
+    .wysiwyg a {
+        @apply text-secondary-700 underline;
+    }
+
+    .wysiwyg p {
+        @apply mb-4;
+    }
+
+    .wysiwyg code {
+        @apply bg-secondary-100 px-1 py-0.5 rounded font-mono;
+    }
+
+    .wysiwyg blockquote {
+        @apply bg-secondary-100 p-4 rounded mb-2;
+    }
+
+    .wysiwyg blockquote > p {
+        @apply mb-0;
+    }
+
+    .wysiwyg hr {
+        @apply mb-5;
+    }
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-white);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+}
+
+@layer utilities {
+    .overflow-overlay {
+        overflow: overlay;
+    }
+}
